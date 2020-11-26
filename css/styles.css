@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.negrita {
+    font-weight: 500;
+}
+
+.main-container {
+    background-color: aliceblue;
+    width: 90%;
+    padding: .625rem;
+    margin: .625rem 0;
+    border-radius: .625rem;
+    box-shadow: 2px 2px 5px #999;
+
+}
+
+.head-container {
+    /*    padding: 20px 0px;*/
+}
+
+.title {
+    font-weight: normal;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-weight: normal;
+    text-align: justify;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.survay-main-container {
+    /*    background-color: chocolate;*/
+}
+
+.medio-question,
+.carta-question,
+.calificacion-question,
+.comentario-question,
+.datos-question {
+    font-size: 1.25rem;
+    font-style: italic;
+    padding: .625rem 0px;
+}
+
+.medio-answer,
+.carta-answer,
+.calificacion-answer,
+.datos-answer {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "q1 a1"
+        "q2 a2"
+        "q3 a3"
+        "q4 a4"
+        "q5 a5";
+    grid-row-gap: 5x;
+}
+
+.comentario-answer {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.label {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0px;
+}
+
+input[type=checkbox]:nth-of-type(1) {
+    transform: scale(1.5);
+}
+
+input[type=radio]:nth-of-type(1) {
+    transform: scale(1.5);
+}
+
+input[type=number]:nth-of-type(1) {
+    transform: scale(1.2);
+}
+
+select:nth-of-type(1) {
+    transform: scale(1.2);
+}
+
+
+.q1 {
+    grid-area: q1;
+}
+
+.q2 {
+    grid-area: q2;
+}
+
+.q3 {
+    grid-area: q3;
+}
+
+.q4 {
+    grid-area: q4;
+}
+
+.q5 {
+    grid-area: q5;
+}
+
+.a1 {
+    grid-area: a1;
+}
+
+.a2 {
+    grid-area: a2;
+}
+
+.a3 {
+    grid-area: a3;
+}
+
+.a4 {
+    grid-area: a4;
+}
+
+.a5 {
+    grid-area: a5;
+}
+
+.submit-container {
+    text-align: center;
+}
+
+.boton {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #638cb5;
+    border: 0px;
+    width: 180px;
+    height: 30px;
+    border-radius: .312rem;
+}
+
+/*
+/ RESPONSIVE
+   ========================================================================= /
+/ Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- /
+*/
+@media (min-width: 768px) {
+    .survay-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/*
+/ Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- /
+*/
+@media (min-width: 1024px) {
+
+    .survay-main-container {
+        display: grid;
+        grid-template-areas:
+            "carta medio"
+            "calificacion comentario"
+            "datos datos"
+            "submit submit";
+
+        column-gap: 30px
+    }
+
+    #medio {
+        grid-area: medio;
+    }
+
+    #carta {
+        grid-area: carta;
+    }
+
+    #calificacion {
+        grid-area: calificacion;
+    }
+
+    #comentario {
+        grid-area: comentario;
+    }
+
+    #datos {
+        grid-area: datos;
+    }
+
+    #submit {
+        grid-area: submit
+    }
+
+    #medio,
+    #carta,
+    #calificacion,
+    #comentario,
+    #datos {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .subtitle {
+        text-align: center
+    }
+
+    .medio-answer,
+    .carta-answer,
+    .calificacion-answer,
+    .medio-answer {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto 20px auto;
+        display: grid;
+        grid-template-areas:
+            "q1 q2 q3 q4 q5"
+            "a1 a2 a3 a4 a5";
+        grid-row-gap: 5x;
+        text-align: center;
+    }
+
+    .datos-answer {
+        max-width: 100%;
+        display: grid;
+        grid-auto-columns: repeat(6, 1fr);
+        grid-template-areas:
+            "q1 a1 q2 a2 q3 a3"
+            "q4 a4 q5 a5 . .";
+    }
+
+}

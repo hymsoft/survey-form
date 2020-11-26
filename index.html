@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="head-container">
+            <h1 id="title" class="title">Ayudanos a mejorar</h1>
+            <p id="description" class="subtitle">Tu opinión es muy importante para nosotros, por favor rellena este formulario, te tomará solo unos minutos.</p>
+        </div>
+
+        <form id="survey-form" action="">
+
+            <div class="survay-main-container">
+
+                <div id="medio" class="survay-container">
+                    <div class="medio-question">
+                        <p>A traves de que medios nos conocistes:</p>
+                    </div>
+                    <div class="medio-answer">
+
+                        <div class="label q1"><label for="medio1">De un contacto o amistad</label></div>
+                        <div class="label q2"><label for="medio2">Google u otro Buscador</label></div>
+                        <div class="label q3"><label for="medio3">Facebook</label></div>
+                        <div class="label q4"><label for="medio4">TripAdvisor</label></div>
+                        <div class="label q5"><label for="medio5">Otro</label></div>
+
+                        <div class="input a1"><input type="checkbox" name="medio1" id="medio1" value="contacto"></div>
+                        <div class="input a2"><input type="checkbox" name="medio2" id="medio2" value="buscador"></div>
+                        <div class="input a3"><input type="checkbox" name="medio3" id="medio3" value="facebook"></div>
+                        <div class="input a4"><input type="checkbox" name="medio4" id="medio4" value="tripadvisor"></div>
+                        <div class="input a5"><input type="checkbox" name="medio5" id="medio5" value="otro"></div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div id="carta" class="survay-container">
+                    <div class="carta-question">
+                        <p>Que opinas de nuestra carta y la preparación de los platos:</p>
+                    </div>
+                    <div class="carta-answer">
+
+                        <div class="label q1"><label for="carta1">Me gusta</label></div>
+                        <div class="label q2"><label for="carta2">Es aceptable</label></div>
+                        <div class="label q3"><label for="carta3">Es mejorable</label></div>
+                        <div class="label q4"><label for="carta4">No me gusta</label></div>
+                        <div class="label q5"><label for="carta5">Necesita renovar</label></div>
+
+                        <div class="input a1"><input type="radio" id="carta1" name="carta" value="5"></div>
+                        <div class="input a2"><input type="radio" id="carta2" name="carta" value="4"></div>
+                        <div class="input a3"><input type="radio" id="carta3" name="carta" value="3"></div>
+                        <div class="input a4"><input type="radio" id="carta4" name="carta" value="2"></div>
+                        <div class="input a5"><input type="radio" id="carta5" name="carta" value="1"></div>
+
+                    </div>
+                </div>
+
+
+
+                <div id="calificacion" class="survay-container">
+                    <div class="calificacion-question">
+                        <p>Califica de <span class="negrita">1 (no me gusta)</span> a <span class="negrita">10 (me encanta)</span> lo siguiente:</p>
+                    </div>
+                    <div class="calificacion-answer">
+                        <div class="label q1"><label id="number-label" for="number">El estado de nuestra sala y su limpieza</label></div>
+                        <div class="input a1"><input type="number" name="number" id="number" min="1" max="10" value="5" placeholder="Califique"></div>
+                        <div class="label q2"><label for="banios">El estado de los baños</label></div>
+                        <div class="input a2">
+                            <select name="banios" id="dropdown">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5" selected>5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <div class="label q3"><label for="atencion">La atencion recibida</label></div>
+                        <div class="input a3">
+                            <select name="atencion" id="atencion">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5" selected>5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="comentario" class="survay-container">
+                    <div class="comentario-question">
+                        <p>Si querés, indicanos en que podremos mejorar...</p>
+                    </div>
+                    <div class="comentario-answer">
+                        <div class="input a1"><textarea name="comentario" id="comentario"></textarea></div>
+                    </div>
+                </div>
+
+                <div id="datos" class="survay-container">
+                    <div class="datos-question">
+                        <p>En agradecimiento, te invitamos una copa de vino en tu próxima visita a nuestro restaurante, para esto, solo envia tus datos...</p>
+                    </div>
+                    <div class="datos-answer">
+                        <div class="label q1"><label id="name-label" for="name">Nombre:</label></div>
+                        <div class="input a1"><input type="text" name="name" id="name" required placeholder="Tu nombre"></div>
+                        <div class="label q2"><label for="apellido">Apellido:</label></div>
+                        <div class="input a2"><input type="text" name="apellido" id="apellido" required placeholder="Tu apellido"></div>
+                        <div class="label q3"><label for="nacimiento">Fecha de nacimiento:</label></div>
+                        <div class="input a3"><input type="date" name="nacimiento" id="nacimiento"></div>
+                        <div class="label q4"><label for="telefono">Teléfono:</label></div>
+                        <div class="input a4"><input type="text" name="telefono" id="telefono" placeholder="Tu telefono fijo"></div>
+                        <div class="label q5"><label for="celular">Celular:</label></div>
+                        <div class="input a5"><input type="text" name="celular" id="celular" placeholder="Tu telefono celular"></div>
+                        <div class="label q6"><label id="email-label" for="email">E-Mail:</label></div>
+                        <div class="input a6"><input type="email" name="email" id="email" required placeholder="Tu email"></div>
+                    </div>
+                </div>
+
+                <div id="submit-container" class="submit-container">
+                    <input id="submit" class="boton" type="submit" value="Enviar">
+                </div>
+            </div>
+        </form>
+    </div>
+</body></html>
